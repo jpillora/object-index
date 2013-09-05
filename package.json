@@ -1,0 +1,27 @@
+{
+  "name": "object-index",
+  "version": "0.1.0",
+  "description": "Index Objects in Node and the Browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpillora/object-index"
+  },
+  "author": "Jaime Pillora <dev@jpillora.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jpillora/object-index/issues"
+  },
+  "gruntSource": {
+    "source": "~/.grunt-sources/node",
+    "repo": "https://github.com/jpillora/grunt-source-node.git"
+  },
+  "devDependencies": [
+    "coffee-script",
+    "mocha",
+    "chai"
+  ]
+}

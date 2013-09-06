@@ -13,6 +13,7 @@ describe "internal > ", ->
 
   it "init", ->
     expect(Store).to.be.a('function')
+    expect(store).to.be.an.instanceof(Array)
     expect(store).to.be.an('object')
     expect(store.length).to.equal(1)
     expect(store.add).to.be.a('function')
@@ -37,6 +38,8 @@ describe "basic > ", ->
     expect(store.length).to.equal(2)
 
   describe "get type > ", ->
+    it "index operator", ->
+      expect(store[0]).to.equal(x)
     it "number", ->
       expect(store.get(0)).to.equal(x)
     it "string from 'a' index", ->
@@ -59,9 +62,12 @@ describe "basic > ", ->
   describe "remove type > ", ->
     it "number", ->
       expect(store.get("foo")).to.equal(x)
+      expect(store.length).to.equal(2)
       expect(store.remove(0)).to.equal(x)
+      expect(store.length).to.equal(1)
       expect(store.get("foo")).to.equal(null)
       expect(store.remove(0)).to.equal(y)
+      expect(store.length).to.equal(0)
     it "string", ->
       expect(store.get("foo")).to.equal(x)
       expect(store.remove("foo")).to.equal(x)
